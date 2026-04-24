@@ -1,11 +1,11 @@
 package Model;
 
-public class aluguel {
+public class Aluguel {
     private String cliente;
     private String filme;
     private String dias;
 
-    public aluguel(String cliente, String filme, String dias) {
+    public Aluguel(String cliente, String filme, String dias) {
         this.cliente = cliente;
         this.filme = filme;
         this.dias = dias;

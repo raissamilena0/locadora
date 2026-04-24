@@ -1,13 +1,14 @@
 package Model;
 
-public class filme {
+public class Filme {
     public String titulo;
-    public String geneto;
+    public String genero;
     public String valoraluguel;
+    private double preco;
 
-    public filme(String titulo, String geneto, String valoraluguel) {
+    public Filme(String titulo, String genero, String valoraluguel) {
         this.titulo = titulo;
-        this.geneto = geneto;
+        this.genero = genero;
         this.valoraluguel = valoraluguel;
     }
 
@@ -20,11 +21,11 @@ public class filme {
     }
 
     public String getGeneto() {
-        return geneto;
+        return genero;
     }
 
     public void setGeneto(String geneto) {
-        this.geneto = geneto;
+        this.genero = geneto;
     }
 
     public String getValoraluguel() {
@@ -39,7 +40,8 @@ public class filme {
 
     }
 
-    private void aplicarDesconto(){
+    private void aplicarDesconto(double porcentagem){
+        this.preco -= this.preco *(porcentagem/100);
 
     }
 }
