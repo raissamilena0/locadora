@@ -3,13 +3,12 @@ package Model;
 public class Filme {
     public String titulo;
     public String genero;
-    public String valoraluguel;
-    private double preco;
+    private Double valor;
 
-    public Filme(String titulo, String genero, String valoraluguel) {
+    public Filme(String titulo, String genero, Double valor) {
         this.titulo = titulo;
         this.genero = genero;
-        this.valoraluguel = valoraluguel;
+        this.valor = valor;
     }
 
     public String getTitulo() {
@@ -20,28 +19,30 @@ public class Filme {
         this.titulo = titulo;
     }
 
-    public String getGeneto() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGeneto(String geneto) {
+    public void setGenero(String geneto) {
         this.genero = geneto;
     }
 
-    public String getValoraluguel() {
-        return valoraluguel;
+    public Double getValor() {
+        return valor;
     }
 
-    public void setValoraluguel(String valoraluguel) {
-        this.valoraluguel = valoraluguel;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
 
     public void exibirDetalhes(){
-
+        System.out.println(getTitulo() + " " + getGenero() + " " + getValor());
     }
 
-    private void aplicarDesconto(double porcentagem){
-        this.preco -= this.preco *(porcentagem/100);
+    public void aplicarDesconto(){
+        double desc = -10;
 
+        System.out.println("valor com desconto é: " + desc);
     }
+
 }

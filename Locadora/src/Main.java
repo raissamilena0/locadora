@@ -9,11 +9,15 @@ public class Main {
     public static void main(String[] args) {
 
     Cliente cliente = new Cliente("maria","9984533637");
+        System.out.println(cliente.getNome());
 
-    Filme filme = new Filme("velozes e furiosos","ação","30,0");
+    Filme filme = new Filme("filme:" + " " + "velozes e furiosos","genero e valor:" + " " + "ação", 34.0);
+    filme.exibirDetalhes();
+    filme.aplicarDesconto();
 
-    Aluguel aluguel = new Aluguel("maria","velozes e furiosos","4");
+    Aluguel aluguel = new Aluguel(cliente,filme,6);
+    aluguel.calcularTotal();
 
-        System.out.println();
+
     }
 }
